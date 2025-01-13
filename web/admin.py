@@ -4,9 +4,9 @@ from .models import *
 
 # Register your models here.
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('id','nome', 'preco', 'estoque')  
+    list_display = ('id','nome')  
     search_fields = ('id','nome',)  
-    list_filter = ('preco',)
+    list_filter = ('nome',)
     list_per_page = 10  
 
 admin.site.register(Produto,ProdutoAdmin)
