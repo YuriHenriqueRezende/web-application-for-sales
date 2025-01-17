@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-zp^wqfpcgxcij%o487g+$hp7$4bsgc)4y=j0c-fs_-taaw@o57
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -39,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'djoser',
     'web',
 ]
+AUTH_USER_MODEL = 'web.UsuarioCustomizado'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
